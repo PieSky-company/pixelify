@@ -6,6 +6,7 @@ export const H1 = styled.h1`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-shadow: -2.470050096511841px -0.08625590056180954px 0px #0ff;
 
   @media (max-width: 768px) {
     font-size: 35px;
@@ -18,6 +19,7 @@ export const H2 = styled.h2`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-shadow: -1.8221900463104248px -0.0636323019862175px 0px #0ff;
 
   @media (max-width: 768px) {
     font-size: 28px;
@@ -73,11 +75,14 @@ export const AppContainer = styled.div`
 export const Button = styled.button`
   display: flex;
   padding: 10px 20px;
-  width: 310px;
+  max-width: 310px;
   font-family: "Inter", sans-serif;
   font-size: 19px;
   font-style: normal;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background: transparent;
   color: #fff;

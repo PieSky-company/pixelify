@@ -1,4 +1,3 @@
-import { t } from "i18next";
 import React, { useState } from "react";
 import {
   NavbarContainer,
@@ -62,10 +61,6 @@ const Navbar = () => {
               <H3>kontakt</H3>
             </NavItem>
 
-            {/* <NavItem $hideOnMobile onClick={() => handleScroll("contact")}>
-              <H3>napisz do nas</H3>
-            </NavItem> */}
-
             <HamburgerContainer onClick={handleExtendNavbar}>
               <Checkbox checked={extendNavbar} readOnly />
               <HamburgerLines>
@@ -79,19 +74,15 @@ const Navbar = () => {
       </NavbarInnerContainer>
       {extendNavbar && (
         <NavbarExtendedContainer isOpen={extendNavbar}>
-          <NavItem onClick={() => handleScroll("about")}>
+          <NavItem onClick={() => handleScroll("offers")}>
             <H3>oferta</H3>
           </NavItem>
-          <NavItem onClick={() => handleScroll("offers")}>
+          <NavItem onClick={() => handleScroll("about")}>
             <H3>o nas</H3>
           </NavItem>
           <NavItem onClick={() => handleScroll("contact")}>
             <H3>kontakt</H3>
           </NavItem>
-          <NavItem onClick={() => handleScroll("contact")}>
-            <H3>portfolio</H3>
-          </NavItem>
-          6tp-y7,
         </NavbarExtendedContainer>
       )}
     </NavbarContainer>

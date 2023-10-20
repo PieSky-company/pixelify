@@ -7,7 +7,11 @@ import {
 import logo from "../../assets/contact/logo.png";
 import { Button, H2, H3 } from "../../App.style";
 
-const Contact = () => {
+interface ContactProps {
+  showFormModal: () => void;
+}
+
+const Contact: React.FC<ContactProps> = ({ showFormModal }) => {
   return (
     <ContactContainer>
       <LogoImg src={logo} />
@@ -24,9 +28,7 @@ const Contact = () => {
           stworzymy coś wyjątkowego.
         </H3>
 
-        <Button onClick={() => alert("zapomnij mordo XDDD")}>
-          FORMULARZ KONTAKTOWY
-        </Button>
+        <Button onClick={showFormModal}>FORMULARZ KONTAKTOWY</Button>
       </ContactContentContainer>
     </ContactContainer>
   );

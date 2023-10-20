@@ -7,7 +7,9 @@ import {
   WhyusImage,
 } from "./Whyus.style";
 import { ColoredSpan, H2, H3, H4 } from "../../App.style";
-import test from "../../assets/offers/web.svg";
+import brainImg from "../../assets/why_us/brain.svg";
+import aimImg from "../../assets/why_us/aim.svg";
+import mountainImg from "../../assets/why_us/mountain.svg";
 
 const Whyus = () => {
   return (
@@ -16,7 +18,7 @@ const Whyus = () => {
 
       <WhyusContentContainer>
         <WhyusContent>
-          <WhyusImage src={test} />
+          <WhyusImage src={brainImg} />
           <H3>
             <ColoredSpan>Kompleksowe rozwiązania</ColoredSpan>
           </H3>
@@ -29,7 +31,7 @@ const Whyus = () => {
         </WhyusContent>
 
         <WhyusContent>
-          <WhyusImage src={test} />
+          <WhyusImage src={aimImg} />
           <H3>
             <ColoredSpan>Twój Sukces, Nasz Cel</ColoredSpan>
           </H3>
@@ -39,7 +41,7 @@ const Whyus = () => {
         </WhyusContent>
 
         <WhyusContent>
-          <WhyusImage src={test} />
+          <WhyusImage src={mountainImg} />
           <H3>
             <ColoredSpan>Ciągłe Doskonalenie</ColoredSpan>
           </H3>

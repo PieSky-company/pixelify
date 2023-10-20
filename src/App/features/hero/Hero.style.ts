@@ -1,14 +1,11 @@
 import styled, { keyframes } from "styled-components";
 
-const gradientAnimation = keyframes`
+const hueAnimation = keyframes`
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    filter: hue-rotate(0deg);
   }
   100% {
-    background-position: 0% 50%;
+    filter: hue-rotate(360deg);
   }
 `;
 
@@ -22,9 +19,9 @@ export const HeroContainer = styled.div`
   justify-content: center;
   text-align: center;
 
-  background: linear-gradient(219deg, deepskyblue, darkviolet, blue, white);
-  background-size: 240% 240%;
-  animation: ${gradientAnimation} 12s ease infinite;
+  filter: hue-rotate(0deg);
+  background: linear-gradient(45deg, #0f8, #08f);
+  animation: ${hueAnimation} 10000ms infinite linear;
 `;
 
 export const TitleContainer = styled.div`
