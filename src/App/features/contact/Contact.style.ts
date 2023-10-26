@@ -55,5 +55,5 @@ export const ContactContentContainer = styled.div`
 
 export const LogoImg = styled.img`
   width: 100%;
-  max-width: 300px;
+  max-width: 260px;
 `;

@@ -13,7 +13,7 @@ import {
   Line,
   NavbarExtendedContainer,
 } from "./Navbar.style";
-import { H3 } from "../../App.style";
+import { H3, H4 } from "../../App.style";
 
 const Navbar = () => {
   const [extendNavbar, setExtendNavbar] = useState<boolean>(false);
@@ -43,22 +43,22 @@ const Navbar = () => {
   return (
     <NavbarContainer $extendedNavbar={extendNavbar}>
       <NavbarInnerContainer>
-        <LeftContainer onClick={handleLogoClick}>
-          <ProjectName>
+        <LeftContainer>
+          <ProjectName onClick={handleLogoClick}>
             <H3>Pixelify</H3>
           </ProjectName>
         </LeftContainer>
         <RightContainer>
           <NavbarLinkContainer>
             <NavItem $hideOnMobile onClick={() => handleScroll("offers")}>
-              <H3>oferta</H3>
+              <H4>oferta</H4>
             </NavItem>
             <NavItem $hideOnMobile onClick={() => handleScroll("about")}>
-              <H3>o nas</H3>
+              <H4>o nas</H4>
             </NavItem>
 
             <NavItem $hideOnMobile onClick={() => handleScroll("contact")}>
-              <H3>kontakt</H3>
+              <H4>kontakt</H4>
             </NavItem>
 
             <HamburgerContainer onClick={handleExtendNavbar}>

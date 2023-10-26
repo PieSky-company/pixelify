@@ -4,7 +4,7 @@ import {
   ContactContentContainer,
   LogoImg,
 } from "./Contact.style";
-import logo from "../../assets/contact/logo.png";
+import logo from "../../assets/pixelify-logo.svg";
 import { Button, H2, H3 } from "../../App.style";
 
 interface ContactProps {

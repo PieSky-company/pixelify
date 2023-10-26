@@ -7,15 +7,11 @@ interface NavbarProps {
 }
 export const NavbarContainer = styled.nav<NavbarProps>`
   width: 100%;
-  height: ${(props) => (props.$extendedNavbar ? "470px" : "80px")};
+  height: ${(props) => (props.$extendedNavbar ? "320px" : "80px")};
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: ${(props) => (props.$extendedNavbar ? "black" : "transparent")};
-  border-bottom: ${(props) =>
-    props.$extendedNavbar
-      ? "1px solid rgba(128, 128, 128, 1)"
-      : "1px solid rgba(128, 128, 128, 0)"};
+  background: ${(props) => (props.$extendedNavbar ? "#25094b" : "transparent")};
   position: fixed;
   top: 0px;
   padding: 0px 10px;
@@ -31,7 +27,8 @@ export const NavbarContainer = styled.nav<NavbarProps>`
 
   @media (min-width: 1000px) {
     height: 80px;
-    padding: 0px 50px;
+    padding: 0px 60px;
+    max-width: 1300px;
   }
 `;
 
@@ -39,21 +36,21 @@ export const LeftContainer = styled.div`
   flex: 30%;
   display: flex;
   justify-content: flex-start;
-  padding-left: 30px;
+  padding-left: 40px;
   gap: 5px;
 
   align-items: center;
 
-  cursor: pointer;
+  @media (min-width: 768px) {
+    padding-left: 80px;
+  }
 `;
 
 export const ProjectName = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 1200px) {
-    display: none;
-  }
+  cursor: pointer;
 `;
 
 export const RightContainer = styled.div`
@@ -62,6 +59,10 @@ export const RightContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   margin-right: 30px;
+
+  @media (min-width: 768px) {
+    margin-right: 50px;
+  }
 `;
 
 export const NavbarInnerContainer = styled.div`
@@ -110,7 +111,7 @@ export const NavItem = styled.a<NavItemProps>`
     margin-right: 0;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 768px) {
     display: ${(props) => (props.$hideOnMobile ? "none" : "block")};
     margin: ${(props) => (props.$hideOnMobile ? "" : "20px 0px")};
   }
@@ -187,14 +188,10 @@ export const HamburgerContainer = styled.button`
   border: none;
   background: transparent;
 
-  margin-right: 25px;
+  margin-right: 30px;
 
-  @media (min-width: 1000px) {
+  @media (min-width: 768px) {
     display: none;
-  }
-
-  @media (max-width: 640px) {
-    color: ${fontColor};
   }
 `;
 
