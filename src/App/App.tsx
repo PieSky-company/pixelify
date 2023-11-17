@@ -15,6 +15,8 @@ import FormModal from "./features/formModal/FormModal";
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
 
+  const handleStopLoading = () => setLoading(false);
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -33,7 +35,7 @@ function App() {
 
       <Navbar />
 
-      <Hero />
+      <Hero handleStopLoading={handleStopLoading} />
 
       <Section id={"offers"}>
         <Offers />

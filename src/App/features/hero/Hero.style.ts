@@ -20,9 +20,11 @@ export const HeroContainer = styled.div`
   text-align: center;
   overflow: hidden;
 
-  filter: hue-rotate(0deg);
+  /* filter: hue-rotate(0deg);
   background: linear-gradient(45deg, #0f8, #08f);
-  animation: ${hueAnimation} 10000ms infinite linear;
+  animation: ${hueAnimation} 10000ms infinite linear; */
+
+  position: relative;
 `;
 
 export const TitleContainer = styled.div`
@@ -51,5 +53,35 @@ export const TitleContainer = styled.div`
     @media (min-width: 768px) {
       top: 38%;
     }
+  }
+`;
+
+export const VideoWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; // for a 16:9 aspect ratio
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const HeroIframe = styled.iframe`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+
+  @media (min-aspect-ratio: 16/9) {
+    height: 56.25vw; /* height = 100 * (9 / 16) = 56.25 */
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    width: 177.78vh; /* width = 100 / (9 / 16) = 177.777777 */
   }
 `;

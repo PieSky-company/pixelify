@@ -2,6 +2,7 @@ import React from "react";
 import {
   ContactContainer,
   ContactContentContainer,
+  ContactIFrame,
   LogoImg,
 } from "./Contact.style";
 import logo from "../../assets/pixelify-logo.svg";
@@ -14,6 +15,13 @@ interface ContactProps {
 const Contact: React.FC<ContactProps> = ({ showFormModal }) => {
   return (
     <ContactContainer>
+      <ContactIFrame
+        title="hej"
+        src="https://player.vimeo.com/video/885376198?h=f69da6294c&autoplay=1&loop=1&muted=1&background=1"
+        frameBorder="0"
+        allow="autoplay; fullscreen"
+        allowFullScreen
+      ></ContactIFrame>
       <LogoImg src={logo} />
 
       <ContactContentContainer>
