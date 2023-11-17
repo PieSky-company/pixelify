@@ -8,6 +8,11 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ handleStopLoading }) => {
+  const handleStopLoadingZaChwile = () => {
+    setTimeout(() => {
+      handleStopLoading();
+    }, 1000);
+  };
   return (
     <HeroContainer>
       <HeroIframe
@@ -16,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ handleStopLoading }) => {
         frameBorder="0"
         allow="autoplay; fullscreen"
         allowFullScreen
-        onLoad={handleStopLoading}
+        onLoad={handleStopLoadingZaChwile}
       ></HeroIframe>
 
       <TitleContainer>

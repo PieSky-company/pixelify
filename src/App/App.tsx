@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 3000);
   }, []);
 
   const [isFormModalOpen, setIsFormModalOpen] = useState<boolean>(false);
